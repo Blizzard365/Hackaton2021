@@ -1,0 +1,361 @@
+										/*Основные моменты*/
+div{
+	display: block;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+body {
+	font-family: Verdana, arial, sans-serif;
+	font-size: 16px;
+	line-height: 1;
+	margin: 0;
+    padding: 0;
+}
+img {
+	display: block;
+	width: 100%;
+	float: left;
+}
+a {
+	margin: 0;
+    padding: 0;
+	text-decoration: none !important;
+	outline: none;
+	color: black;
+}
+header{
+	min-height: 100px;
+	background-color: white;
+}
+.clr{
+	clear: both;
+}
+
+                                        /*Header*/
+.menu_standart{
+	float: left;
+}
+.menu_ul{
+	line-height: 35px;
+}
+.menu_li{
+	display: inline-block;
+	margin-right: 15px;
+	font-size: 16px;
+	font-family: Verdana;
+}
+.menu_li a:active{
+	color: #B99867 !important;
+}
+.active{
+	font-weight: 600;
+}
+.menu_li a:hover{
+	color: #B99867 !important;
+}
+.logo{
+	color: #B99867;
+	font-size: 28px;
+	float: left;
+}
+.logo span{
+	font-style: italic;
+	color: #294057;
+}
+.logo:hover{
+	color: #B99867;
+}
+nav .menu_li a span{
+	color: #B99867 !important;
+}
+.logo_block{
+	display: inline-flex;
+	margin-top: 25px;
+}
+										/*Мобильное меню*/
+
+.navbar-header{
+    align-items: center;
+    display: flex;
+}
+.menu_btn{
+    display: block;
+    background-color: 0;
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.menu_btn span,
+.menu_btn span::before,
+.menu_btn span::after {
+    position: absolute;
+    background-color: #222;
+    top: 50%; 
+    left: 5px;
+    width: 30px;
+    height: 3px;
+}
+.menu_btn span::before,
+.menu_btn span::after{
+    content: '';
+    display: block;
+    transition: 0.5s;
+}
+.menu_btn span::before {
+    transform: translateY(-10px);
+}
+.menu_btn span::after {
+    transform: translateY(5px);
+}
+@media(min-width: 320px){
+.menu_mobile{
+	display: block;
+}
+.menu_standart{
+	display: none;
+}
+}
+@media(min-width: 991px){
+.menu_mobile{
+	display: none;
+}
+.menu_standart{
+	display: block;
+}
+}
+									/*Banner*/
+.banner img{
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	width: 100%;
+}
+									/*Реклама*/
+.advertising{
+	min-height: 460px;
+}
+.advertising_block{		
+	background-color: #605E5E;
+	border-radius: 30px;
+	margin-top: 150px;
+	font-size: 22px;
+	padding: 20px;
+	margin: 90px 40px 0 40px;
+	color: white;
+	height: 150px;
+}
+.advr_span{
+	background-color: #B99867;
+}
+.advr_btn{
+	border-radius: 15px;
+	border: 2px solid #605E5E;
+	padding: 14px;
+	font-size: 22px;
+
+}
+.advr_btn:hover{
+	color: white;
+	background-color: #B99867;
+	border-color:  #B99867;
+}
+.advr_btn_block{
+	margin-top: 80px;
+	display: flex ;
+	align-items: center ;
+	justify-content: center ;
+}
+											/*Как работает сервис?*/
+.how_work{
+	min-height: 500px;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: left;
+}
+.title_how_work{
+	text-align: center;
+	font-weight: bold;
+}
+.how_work h5{
+	font-weight: bold;
+}
+.how_work_img{
+	width: 100px;
+	height: 100px;
+	display: flex ;
+	align-items: center ;
+	justify-content: center ;
+}
+.number{
+	width: 150px;
+	height: 150px;
+	margin: 50px 50px 0 0;
+}
+.how_work_img_1{
+	width: 180px;
+	height: 100px;
+	display: flex ;
+	align-items: center ;
+	justify-content: center ;
+}
+.a2{
+	margin-left: 15px;
+	width: 120px;
+	height: 120px;
+}
+.how_work_content{
+	margin: 50px 0px 0 50px;
+}
+
+												/*Вопрос - Ответ*/
+.faq_title{
+	text-align: center;
+}
+.demo {
+    max-width: 1024px;
+    padding: 0 20px;
+    margin: 5% 10%;
+}
+/* скрываем чекбоксы и блоки с содержанием */
+.hide,
+.hide + label ~ div {
+    display: none;
+}
+/* вид текста label */
+.hide + label {
+    margin: 0;
+    padding: 0;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: black;
+    border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block; 
+    background: #efefef;
+    -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
+    -webkit-box-shadow: inset 3px 3px 10px #7d8e8f;
+    box-shadow: inset 3px 3px 10px #7d8e8f;
+    margin-left: 20px;
+    padding: 10px;
+    /* чуточку анимации при появлении */
+     -webkit-animation:fade ease-in 0.5s; 
+     -moz-animation:fade ease-in 0.5s;
+     animation:fade ease-in 0.5s; 
+}
+/* анимация при появлении скрытых блоков */
+@-moz-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }   
+}
+.hide + label:before {
+    background-color: #1e90ff;
+    color: #fff;
+    content: "\002B";
+    display: block;
+    float: left;
+    font-size: 14px; 
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    margin: 3px 5px;
+    text-align: center;
+    width: 16px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.hide:checked + label:before {
+    content: "\2212";
+}
+										/*Регистрация/Вход*/
+.reg_block{
+	min-height: 600px;
+}
+.a{
+	color: #44036F;
+}
+.avt_form{
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+.avt_block{
+	height: 80vh;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+.avt_button{
+	padding: 10px;
+	border: unset;
+}
+.label{
+	font-weight: 600;
+	margin-top: 10px;
+}
+.msg{
+	border-radius: 3px;
+	border: 2px solid #ffa908;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+.logout{
+	text-align: right;
+	color: #B99867;
+	font-weight: bold;
+}
+.logout:hover{
+	color: #B99867;
+}
+.p{
+	margin-top: 20px;
+}
+.avt_input{
+	margin: 10px 0;
+	padding: 10px;
+	border: unset;
+	outline: none;
+	border-bottom: 2px solid #44036F;
+}
+.p_reg{
+	text-align: center;
+}
+#submit1:hover{
+	background-color: #B99867;
+	color: white;
+}
+											/*Мой профиль*/
+.line{
+	min-height: 260px;
+	background-color:  #605E5E;
+}
+.user_data{
+	color: white;
+}
+
+
+
+
+
+
+
+
